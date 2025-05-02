@@ -1,0 +1,28 @@
+button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 70px;
+    width: 218px;
+    height: 50px;
+    color: white;
+    background: linear-gradient(to bottom, #FF79DA, #9356DC);
+    border: none;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    transition: transform;
+    transition-duration: 1ms;
+    transition: filter 1s ease-in-out;
+  }
+
+  button:hover {
+    filter: brightness(1.3);
+  }
+  button:not(:hover) span {
+    transform: translate(0, 0);
+  }
+  
+  button:not(:hover) {
+    transition: filter 0.5s ease-in-out;
+    filter: brightness(1);
+  }
