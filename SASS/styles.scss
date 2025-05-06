@@ -71,6 +71,10 @@ body {
     }
 }
 
+input {
+    all: unset;
+    width: 110px;
+}
 .cities {
     display: flex;
     justify-content: center;
@@ -301,27 +305,9 @@ body {
     }
 }
 
-button {
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 70px;
-    width: 218px;
-    height: 50px;
-    color: white;
-    background: linear-gradient(to bottom, #FF79DA, #9356DC);
-    border: none;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-    transition-property: transform;
-    transition-duration: 1ms;
-    &:hover span {
-        transform: translate(-5px, -5px);
-    }
-}
 
-button:not(:hover) span {
-    transform: translate(0, 0);
-}
+
+
 
 .functioning-content {
     display: flex;

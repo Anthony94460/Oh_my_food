@@ -5,7 +5,6 @@
     filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
     width: 95%;
     margin-bottom: 20px;
-    
     padding-top: 0px; 
     padding-left: 0px;
     padding-right: 0px;
@@ -47,7 +46,11 @@
         }
         
          input:checked + label .heart-icon {
-            color: #9356DC;
+            background: linear-gradient(to bottom, #9356DC, #FF79DA);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            transform: scale(1);
+            transition:  1s ease;
             font-family: "Font Awesome 5 Free";
             font-weight: 900;
             content: "\f004";
