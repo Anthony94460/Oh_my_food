@@ -228,7 +228,13 @@ button:not(:hover) {
   padding-bottom: 50px;
 }
 .functioning i {
+  color: #7E7E7E;
+}
+.functioning .choose:hover .fa-solid,
+.functioning .compose:hover .fa-solid,
+.functioning .deguste:hover .fa-solid {
   color: #9356DC;
+  transition: color 0.1s;
 }
 .functioning .numbers {
   color: white;
@@ -360,6 +366,16 @@ footer .footer-content {
   }
   .reserve p {
     width: auto;
+  }
+  .heart-icon:hover {
+    background: linear-gradient(to bottom, #9356DC, #FF79DA);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transform: scale(1);
+    transition: 1s ease;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f004";
   }
   .functioning-content {
     display: flex;

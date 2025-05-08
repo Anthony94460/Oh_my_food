@@ -120,7 +120,11 @@ body {
     transition: filter 0.5s ease-in-out;
     filter: brightness(1);
   }
+
   
+  
+
+
   .fa-circle-check {
     color: white;
     background-color: #99E2D0;
@@ -133,9 +137,10 @@ body {
     margin-top: 5px;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
-    display: none;
+    
   }
-
+ 
+ 
   .restaurants {
     margin-top: 50px;
   }
@@ -154,11 +159,11 @@ body {
     filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
     width: 95%;
     margin-bottom: 20px;
-    
     padding-top: 0px;
     padding-left: 0px;
     padding-right: 0px;
     cursor: pointer;
+    overflow: hidden;
   }
   
   .card {
@@ -167,6 +172,31 @@ body {
     justify-content: space-between;
     height: 70px;
   }
+  .card-checkbox:checked + .card-text + .card-footer i {
+    opacity: 1;
+    width: 50px; /* Ajuste cette valeur pour changer la distance de poussée */
+    
+}
+.card-checkbox:checked + .card-text + .card-footer {
+  gap: 16px;
+  
+}
+
+.card-checkbox {
+  display: none;
+}
+  .card-footer {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: gap 0.1s ease;
+}
+.card i {
+  opacity: 0;
+  width: 0;
+  transition: opacity 1s ease, width 0.5s ease;
+  overflow: hidden;
+}
  
   .card-price {
     margin-top: 30px;
@@ -289,7 +319,16 @@ body {
       height: 300px;
     }
 
-    
+    .heart-icon:hover {
+      background: linear-gradient(to bottom, #9356DC, #FF79DA);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      transform: scale(1);
+      transition:  1s ease;
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      content: "\f004";
+    }
     
     .title-restaurant {
       display: flex;
@@ -330,7 +369,14 @@ body {
     .card .card-body input {
       display: none;
     }
-   
+    .card:hover .card-footer i {
+      opacity: 1;
+      width: 50px;
+  }
+
+  .card:hover .card-footer {
+      gap: 16px;
+  }
     footer {
       background-color: #353535;
       background-size: cover;
